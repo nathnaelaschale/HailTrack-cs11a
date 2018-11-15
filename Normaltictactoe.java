@@ -43,13 +43,6 @@ public class NormalTicTacToe{
         firstplay(r,p1);
       }
     }
-
-    NormalTicTacToeBoard(data);
-    System.out.println(player1+ " make your move:");
-    int p1Move = TextIO.getlnInt();
-    p1Move--;
-    data[p1Move] = "x";
-    NormalTicTacToeBoard(data);
   }
   public static void firstplay(String[] r, String p1){//this lets the first player make their move.
   System.out.println(p1+" make your move:");
@@ -79,7 +72,7 @@ public class NormalTicTacToe{
     secoundboard(r);
     thirdboard(r);
   }
-  
+
   public static void NormalTicTacToeBoard(String[] r){
     System.out.println("-------------");
     System.out.println("| " + r[0] + " | " + r[1] + " | " + r[2] + " |");
@@ -89,7 +82,7 @@ public class NormalTicTacToe{
     System.out.println("| " + r[6] + " | " + r[7] + " | " + r[8] + " |");
     System.out.println("-------------");
   }
-
+/*
   public static boolean winfirstboard(String[] r){
 
   }
@@ -106,7 +99,7 @@ public class NormalTicTacToe{
   }
 
 
-
+*/
 
 
 
