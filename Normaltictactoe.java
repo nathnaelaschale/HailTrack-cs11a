@@ -55,8 +55,8 @@ public class NormalTicTacToe{
     firstplay(r,p2);
   }
   firstboard(r);
-  secoundboard(r);
-  thirdboard(r);
+  //secoundboard(r);
+  //thirdboard(r);
 }
   public static void secondplay(String[] r,String  p2){
     System.out.println(p2+" make your move:");
@@ -69,8 +69,8 @@ public class NormalTicTacToe{
       secondplay(r,p2);
     }
     firstboard(r);
-    secoundboard(r);
-    thirdboard(r);
+    //secoundboard(r);
+    //thirdboard(r);
   }
 
   public static void NormalTicTacToeBoard(String[] r){
