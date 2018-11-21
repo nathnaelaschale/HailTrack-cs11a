@@ -6,9 +6,10 @@ public class NormalTicTacToe{
     "25","26","27"};
 
     firstboard(r);//prints the first board
+    /*
     secoundboard(r);//prints the secound board
     thirdboard(r);//prints the third board
-
+*/
     System.out.println("Normal Tic-Tac-Toe");
 
     System.out.println("__________________________");
