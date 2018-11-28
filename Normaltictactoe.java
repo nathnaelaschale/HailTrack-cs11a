@@ -4,7 +4,7 @@ public class NormalTicTacToe{
     String[]  r = {"1", "2", "3", "4", "5", "6", "7", "8", "9","10", "11", "12",
     "13", "14", "15", "16", "17","18","19","20","21","22","23","24",
     "25","26","27"};
-
+    boolean PlayAgain = true;
 
     System.out.println("Normal Tic-Tac-Toe");
 
@@ -19,43 +19,49 @@ public class NormalTicTacToe{
     System.out.println("there will be a number corresponding to each empty space.");
     System.out.println("When prompted, enter the number corresponding to the space where you want to");
     System.out.println("place your piece. Your piece will show up on the board! Have fun :)");
+    while (PlayAgain == true) {
+      System.out.println("Enter a names of the players:");//gets names of the players
+      String p1= TextIO.getlnWord();
+      String p2= TextIO.getlnWord();
 
-    System.out.println("Enter a names of the players:");//gets names of the players
-    String p1= TextIO.getlnWord();
-    String p2= TextIO.getlnWord();
+      System.out.println("Who wants to go first:");//gets whos wants to go first
+      String player= TextIO.getlnWord();
 
-    System.out.println("Who wants to go first:");//gets whos wants to go first
-    String player= TextIO.getlnWord();
+      boards(r);
 
-    boards(r);
-
-    Boolean win = false;//a statement that check if someone wins.
-    if (p1.equals(player)){//checks which one is the players wants to go.
+      Boolean win = false;//a statement that check if someone wins.
+      if (p1.equals(player)){//checks which one is the players wants to go.
+            do {
+              firstplay(r,p1,win,p2);
+              if (winboard(r,win,p1,p2)== true|| wincombinedboard(r,win,p1,p2)==true){
+                break;
+              }
+              secondplay(r,p2,win,p1);
+              if (winboard(r,win,p1,p2)== true|| wincombinedboard(r,win,p1,p2)==true){
+                break;
+              }
+            }while(win == false);
+    //This while loop will let the plays make their moves until someone wins.
+        }else {
           do {
-            firstplay(r,p1,win,p2);
-            if (winboard(r,win,p1,p2)== true|| wincombinedboard(r,win,p1,p2)==true){
-              break;
-            }
             secondplay(r,p2,win,p1);
             if (winboard(r,win,p1,p2)== true|| wincombinedboard(r,win,p1,p2)==true){
               break;
             }
+            firstplay(r,p1,win,p2);
+            if (winboard(r, win,p1,p2)== true|| wincombinedboard(r,win,p1,p2)== true ){
+              break;
+            }
           }while(win == false);
-    //This while loop will let the plays make their moves until someone wins.
-      }else {
-        do {
-          secondplay(r,p2,win,p1);
-          if (winboard(r,win,p1,p2)== true|| wincombinedboard(r,win,p1,p2)==true){
-            break;
-          }
-          firstplay(r,p1,win,p2);
-          if (winboard(r, win,p1,p2)== true|| wincombinedboard(r,win,p1,p2)== true ){
-            break;
-          }
-        }while(win == false);
+        }
+        System.out.println("Would you like to play again? (Answer 'yes' or 'no')");
+        String YesNo = TextIO.getln();
+        if (YesNo.equals("no")){
+          PlayAgain = false;
+        }
       }
-      }
-    public static void firstplay(String[] r, String p1,Boolean win,String p2){//this lets the first player make their move.
+    }
+public static void firstplay(String[] r, String p1,Boolean win,String p2){//this lets the first player make their move.
       System.out.println(p1+" make your move:");
       int p1Move = TextIO.getlnInt();
       p1Move--;
@@ -67,7 +73,7 @@ public class NormalTicTacToe{
       }
       boards(r);
     }
-    public static void secondplay(String[] r,String  p2, Boolean win, String p1){
+public static void secondplay(String[] r,String  p2, Boolean win, String p1){
       System.out.println(p2+" make your move:");
       int p2Move = TextIO.getlnInt();
       p2Move--;
@@ -80,7 +86,7 @@ public class NormalTicTacToe{
       boards(r);
     }
 
-  public static void boards(String[] r){//this is boards
+public static void boards(String[] r){//this is boards
       for(int i=0; i<r.length; i++){
         System.out.println("-------------");
         System.out.println("| " + r[i] + " | " + r[i+1] + " | " + r[i+2] + " |");
