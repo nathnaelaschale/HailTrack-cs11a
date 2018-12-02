@@ -1,5 +1,8 @@
-public class NormalTicTacToe{
+import java.util.Scanner;
+public class NormalTicTacToeTest{
   public static void main(String[] args){
+    Scanner console = new Scanner(System.in);
+
 
     String[]  r = {"1", "2", "3", "4", "5", "6", "7", "8", "9","10", "11", "12",
     "13", "14", "15", "16", "17","18","19","20","21","22","23","24",
@@ -21,11 +24,11 @@ public class NormalTicTacToe{
     System.out.println("place your piece. Your piece will show up on the board! Have fun :)");
     while (PlayAgain == true) {
       System.out.println("Enter a names of the players:");//gets names of the players
-      String p1= TextIO.getlnWord();
-      String p2= TextIO.getlnWord();
+      String p1= console.nextLine();
+      String p2= console.nextLine();
 
       System.out.println("Who wants to go first:");//gets whos wants to go first
-      String player= TextIO.getlnWord();
+      String player= console.nextLine();
 
       boards(r);
 
@@ -55,7 +58,7 @@ public class NormalTicTacToe{
           }while(win == false);
         }
         System.out.println("Would you like to play again? (Answer 'yes' or 'no')");
-        String YesNo = TextIO.getln();
+        String YesNo = console.nextLine();
         if (YesNo.equals("no")){
           PlayAgain = false;
         }
@@ -63,7 +66,8 @@ public class NormalTicTacToe{
     }
 public static void firstplay(String[] r, String p1,Boolean win,String p2){//this lets the first player make their move.
       System.out.println(p1+" make your move:");
-      int p1Move = TextIO.getlnInt();
+      Scanner number = new Scanner(System.in);
+      int p1Move = number.nextInt();
       p1Move--;
       if(r[p1Move] != "O" && r[p1Move] != "X"){//checks if the place is already taken
         r[p1Move] = "X";//places O when there is no Xs or Os on the board
@@ -75,7 +79,8 @@ public static void firstplay(String[] r, String p1,Boolean win,String p2){//this
     }
 public static void secondplay(String[] r,String  p2, Boolean win, String p1){
       System.out.println(p2+" make your move:");
-      int p2Move = TextIO.getlnInt();
+      Scanner number = new Scanner(System.in);
+      int p2Move = number.nextInt();
       p2Move--;
       if(r[p2Move] != "O" && r[p2Move] != "X"){
         r[p2Move] = "O";
