@@ -23,7 +23,7 @@ public class NormalTicTacToeTest{
     System.out.println("When prompted, enter the number corresponding to the space where you want to");
     System.out.println("place your piece. Your piece will show up on the board! Have fun :)");
     while (PlayAgain == true) {
-      System.out.println("Enter the names of the players:");//gets names of the players
+   
       System.out.println("Enter name of player one.");
       String p1= console.nextLine();
       System.out.println("Enter name of player two.");
