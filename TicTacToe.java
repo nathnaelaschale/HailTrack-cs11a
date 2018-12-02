@@ -193,11 +193,19 @@ public class TicTacToe {
 		}
 		if (board[0].equals("X") && board[13].equals("X") && board[26].equals("X")) {
 			win = true;
-			System.out.println(firstPlayer + " won!!!!!");
+			System.out.println("Congratulations," + firstPlayer + " won!!!!!");
 		}
 		if (board[2].equals("X") && board[13].equals("X") && board[24].equals("X")) {
 			win = true;
-			System.out.println(firstPlayer + " won!!!!!");
+			System.out.println("Congratulations," + firstPlayer + " won!!!!!");
+		}
+		if (board[0].equals("O") && board[13].equals("O") && board[26].equals("O")) {
+			win = true;
+			System.out.println("Congratulations," + secondPlayer + " won!!!!!");
+		}
+		if (board[2].equals("O") && board[13].equals("O") && board[24].equals("O")) {
+			win = true;
+			System.out.println("Congratulations," + secondPlayer + " won!!!!!");
 		}
 		return win;
 	}
