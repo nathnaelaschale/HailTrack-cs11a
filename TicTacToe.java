@@ -4,7 +4,7 @@ public class TicTacToe {
 	public static Scanner console = new Scanner(System.in);
 	public static String firstPlayer = "";
 	public static String secondPlayer = "";
-
+//Basic prompt for which game the players want to play.
 	public static void main(String[] args) {
 		System.out.println("Hello! You are currently playing HailTrack's TicTacToe. Which game "
 				+ "would you like to play? Input to number corresponding to your choice.");
