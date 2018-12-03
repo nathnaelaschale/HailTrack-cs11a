@@ -11,6 +11,7 @@ public class TicTacToe {
 		System.out.println("1  Normal TicTacToe");
 		System.out.println("2  3D TicTacToe");
 		int choice = console.nextInt();
+		//While loop that prompts the user if they don't enter 1 or 2.
 		while (choice != 1 && choice != 2) {
 			System.out.println("Error: Please enter the number corresponding to the game of your choice.");
 			choice = console.nextInt();
@@ -26,7 +27,7 @@ public class TicTacToe {
 	public static void NormalTicTacToe() {
 
 	}
-
+	//prints the board and explains the rules of the game.
 	public static void ThreeDTicTacToe() {
 		String[] board = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17",
 				"18", "19", "20", "21", "22", "23", "24", "25", "26", "27" };
@@ -40,6 +41,7 @@ public class TicTacToe {
 				+ "be a number corresponding to each empty space. When prompted, enter the "
 				+ "number corresponding to the space where you want to place your piece. Your "
 				+ "piece will show up on the board! Have fun :)");
+		//Prompts the players to enter in their player names and turn order.
 		while (PlayAgain == true) {
 			System.out.println("Enter name of player one:");
 			String p1 = console.nextLine();
@@ -65,6 +67,7 @@ public class TicTacToe {
 				}
 			} while (win == false);
 		}
+		//Checks to see if the players want to play again. If yes it creates a new game and if no it ends the program.
 		System.out.println("Would you like to play again? (Answer 'yes' or 'no')");
 		String YesNo = console.nextLine();
 		while (!YesNo.equalsIgnoreCase("yes") && !YesNo.equalsIgnoreCase("no"))
@@ -72,7 +75,9 @@ public class TicTacToe {
 				PlayAgain = false;
 			}
 	}
-
+	/*For the player going first (The X) it does a few important things: prompts the player for their move.
+	Then checks to see if the move has already been made or does not exist and informs the user.
+	If the move is acceptable it goes through the printboard method. */
 	public static void firstplay(String[] board, String currentPlayer) {
 		System.out.println(currentPlayer + " make your move:");
 		Scanner number = new Scanner(System.in);
@@ -90,7 +95,9 @@ public class TicTacToe {
 		}
 		printBoards(board);
 	}
-
+	/*For the player going second(The O) does a few important things: prompts the player for their move.
+Then checks to see if the move has already been made or does not exist and informs the user.
+If the move is acceptable it goes through the printboard method.*/
 	public static void secondplay(String[] board, String currentPlayer) {
 		System.out.println(currentPlayer + " make your move:");
 		Scanner number = new Scanner(System.in);
