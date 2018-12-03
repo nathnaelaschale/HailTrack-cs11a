@@ -115,7 +115,7 @@ If the move is acceptable it goes through the printboard method.*/
 		}
 		printBoards(board);
 	}
-
+	//Updates the board with player moves at the beginning of each player's turn.
 	public static void printBoards(String[] board) {
 		for (int i = 0; i < board.length; i += 3) {
 			System.out.println("-------------");
@@ -126,7 +126,7 @@ If the move is acceptable it goes through the printboard method.*/
 			}
 		}
 	}
-
+	//The method that tests to see if a player won.
 	public static boolean winThreeByThreeTest(String[] board, Boolean win) {
 		for (int i = 0; i < board.length; i += 3) {
 			if (board[i].equals("X") && board[i + 1].equals("X") && board[i + 2].equals("X")) {
