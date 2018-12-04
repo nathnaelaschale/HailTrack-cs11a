@@ -4,7 +4,7 @@
 * until the user decides they would no longer like to play. Both 
 * games of Tic Tac Toe have been created using one-dimensional arrays.
 *
-* @version 1.10 04 Dec 2018
+* @version 1.10 03 Dec 2018
 * @author Nathnael Aschale
 * @author Alexander Cortez
 * @author Anna Machata
