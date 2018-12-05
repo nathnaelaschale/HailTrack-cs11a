@@ -1,7 +1,7 @@
 /**
 * This class allows users to play either classic Tic Tac Toe or
 * Three Dimensional Tic Tac Toe. This program will continue running
-* until the user decides they would no longer like to play. Both 
+* until the user decides they would no longer like to play. Both
 * games of Tic Tac Toe have been created using one-dimensional arrays.
 *
 * @version 1.10 03 Dec 2018
@@ -39,10 +39,10 @@ public class TicTacToe {
 
 	/**
  	* This method allows players to play NormalTicTacToe, with a 3 by 3 board. It also alerts
-	* players if they have tied, and provides the players with the option to play again if 
+	* players if they have tied, and provides the players with the option to play again if
  	* they would like to.
  	*/
-	
+
 	public static void NormalTicTacToe() {
 		boolean PlayAgain = true; //Boolean which allows the game to run. Can be changed by user at end of game.
 		System.out.println("Normal Tic-Tac-Toe");
@@ -151,15 +151,13 @@ public class TicTacToe {
 			} while (win == false);
 			System.out.println("Would you like to play again? (Answer 'yes' or 'no')");//Allows players to choose to play again
 			String YesNo = console.next();
-			while (!YesNo.equalsIgnoreCase("yes") && !YesNo.equalsIgnoreCase("no")) {
 				if (YesNo.equalsIgnoreCase("no")) {
 					PlayAgain = false;
 				}
-			}
 		}
 	}
 	/**
- 	* This method allows the first player to make a move in either game. 
+ 	* This method allows the first player to make a move in either game.
 	*It sends an error message if a spot is taken or nonexistant, and
 	*prints the board(s) after the player has moved.
  	*/
@@ -181,7 +179,7 @@ public class TicTacToe {
 		printBoards(board);//prints the board(s)
 	}
 	/**
- 	* This method allows the second player to make a move in either game. 
+ 	* This method allows the second player to make a move in either game.
 	*It sends an error message if a spot is taken or nonexistant, and
 	*prints the board(s) after the player has moved.
  	*/
