@@ -262,7 +262,7 @@ public class TicTacToe {
 		return win;
 	}
 	/**
- 	* This method tests if players have one in a variety of ways on a 3D
+ 	* This method tests if players have won in a variety of ways on a 3D
 	*TicTacToe board, including cross vertical wins, cross horizontal wins,
 	*and cross diagonal wins. It returns a printed win statement and
 	*a true boolean if someone has won.
