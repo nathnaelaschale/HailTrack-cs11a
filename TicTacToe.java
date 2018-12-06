@@ -75,7 +75,7 @@ public class TicTacToe {
 				}
 			}
 			else {
-				System.out.println("You did not enter a valid player name. "+p1+" will be the first player.")
+				System.out.println("You did not enter a valid player name. "+p1+" will be the first player.");
 			}
 			printBoards(board);
 			boolean win = false;
@@ -147,7 +147,7 @@ public class TicTacToe {
 				}
 			}
 			else {
-				System.out.println("You did not enter a valid player name. "+p1+" will be the first player.")
+				System.out.println("You did not enter a valid player name. "+p1+" will be the first player.");
 			}
 			printBoards(board);
 			boolean win = false;
