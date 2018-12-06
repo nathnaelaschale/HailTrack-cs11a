@@ -258,53 +258,23 @@ public class TicTacToe {
 				i += 6;
 			}
 		}
-		if (board[0].equals("X") && board[4].equals("X") && board[8].equals("X")) {
-			win = true;
-			System.out.println("Congratulations," + firstPlayer + " won!!!!!");
+		for (int i = 0; i < board.length; i+=9) {
+			if (board[i].equals("X") && board[i + 4].equals("X") && board[i + 8].equals("X")) {
+				win = true;
+				System.out.println("Congratulations," + firstPlayer + " won!!!!!");
+			} else if (board[i].equals("O") && board[i + 4].equals("O") && board[i + 8].equals("O")) {
+				win = true;
+				System.out.println("Congratulations," + secondPlayer + " won!!!!!");
+			}
 		}
-		if (board[2].equals("X") && board[4].equals("X") && board[6].equals("X")) {
-			win = true;
-			System.out.println("Congratulations," + firstPlayer + " won!!!!!");
-		}
-		if (board[0].equals("O") && board[4].equals("O") && board[8].equals("O")) {
-			win = true;
-			System.out.println("Congratulations," + secondPlayer + " won!!!!!");
-		}
-		if (board[2].equals("O") && board[4].equals("O") && board[6].equals("O")) {
-			win = true;
-			System.out.println("Congratulations," + secondPlayer + " won!!!!!");
-		}
-		if (board[9].equals("X") && board[13].equals("X") && board[17].equals("X")) {
-			win = true;
-			System.out.println("Congratulations," + firstPlayer + " won!!!!!");
-		}
-		if (board[11].equals("X") && board[13].equals("X") && board[15].equals("X")) {
-			win = true;
-			System.out.println("Congratulations," + firstPlayer + " won!!!!!");
-		}
-		if (board[9].equals("O") && board[13].equals("O") && board[17].equals("O")) {
-			win = true;
-			System.out.println("Congratulations," + secondPlayer + " won!!!!!");
-		}
-		if (board[11].equals("O") && board[13].equals("O") && board[15].equals("O")) {
-			win = true;
-			System.out.println("Congratulations," + secondPlayer + " won!!!!!");
-		}
-		if (board[18].equals("X") && board[22].equals("X") && board[26].equals("X")) {
-			win = true;
-			System.out.println("Congratulations," + firstPlayer + " won!!!!!");
-		}
-		if (board[20].equals("X") && board[22].equals("X") && board[24].equals("X")) {
-			win = true;
-			System.out.println("Congratulations," + firstPlayer + " won!!!!!");
-		}
-		if (board[18].equals("O") && board[22].equals("O") && board[26].equals("O")) {
-			win = true;
-			System.out.println("Congratulations," + secondPlayer + " won!!!!!");
-		}
-		if (board[20].equals("O") && board[22].equals("O") && board[24].equals("O")) {
-			win = true;
-			System.out.println("Congratulations," + secondPlayer + " won!!!!!");
+		for (int i = 2; i < board.length; i+=9) {
+			if (board[i].equals("X") && board[i + 2].equals("X") && board[i + 4].equals("X")) {
+				win = true;
+				System.out.println("Congratulations," + firstPlayer + " won!!!!!");
+			} else if (board[i].equals("O") && board[i + 2].equals("O") && board[i + 4].equals("O")) {
+				win = true;
+				System.out.println("Congratulations," + secondPlayer + " won!!!!!");
+			}
 		}
 		return win;
 	}
