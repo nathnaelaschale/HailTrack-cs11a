@@ -2,7 +2,7 @@
 /**
 * This class allows users to play either classic Tic Tac Toe or
 * Three Dimensional Tic Tac Toe. This program will continue running
-* until the user decides they would no longer like to play. Both 
+* until the user decides they would no longer like to play. Both
 * games of Tic Tac Toe have been created using one-dimensional arrays.
 *
 * @version 1.10 03 Dec 2018
@@ -66,10 +66,16 @@ public class TicTacToe {
 			String p2 = console.next();
 			System.out.println("Who wants to go first? ");
 			firstPlayer = console.next();
-			if (firstPlayer.equals(p1)) {
-				secondPlayer = p2;
-			} else {
-				secondPlayer = p1;
+			if (firstPlayer.equals(p1) || firstPlayer.equals(p2)){
+				if (firstPlayer.equals(p1)) {
+					secondPlayer = p2;
+					}
+				else {
+					secondPlayer = p1;
+				}
+			}
+			else {
+				System.out.println("You did not enter a valid player name. "+p1+" will be the first player.")
 			}
 			printBoards(board);
 			boolean win = false;
@@ -132,10 +138,16 @@ public class TicTacToe {
 			String p2 = console.next();
 			System.out.println("Who wants to go first? ");
 			firstPlayer = console.next();
-			if (firstPlayer.equals(p1)) {
-				secondPlayer = p2;
-			} else {
-				secondPlayer = p1;
+			if (firstPlayer.equals(p1) || firstPlayer.equals(p2)){
+				if (firstPlayer.equals(p1)) {
+					secondPlayer = p2;
+					}
+				else {
+					secondPlayer = p1;
+				}
+			}
+			else {
+				System.out.println("You did not enter a valid player name. "+p1+" will be the first player.")
 			}
 			printBoards(board);
 			boolean win = false;
